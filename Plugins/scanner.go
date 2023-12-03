@@ -90,7 +90,7 @@ func Scan(info common.HostInfo) {
 	wg.Wait()
 	common.LogWG.Wait()
 	close(common.Results)
-	fmt.Printf("已完成 %v/%v\n", common.End, common.Num)
+	fmt.Printf("Completed %v/%v\n", common.End, common.Num)
 }
 
 var Mutex = &sync.Mutex{}

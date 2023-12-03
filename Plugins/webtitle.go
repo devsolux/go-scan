@@ -151,7 +151,7 @@ func geturl(info *common.HostInfo, flag int, CheckData []WebScan.CheckDatas) (er
 		}
 		result := fmt.Sprintf("[*] WebTitle %-25v code:%-3v len:%-6v title:%v", resp.Request.URL, resp.StatusCode, length, title)
 		if reurl != "" {
-			result += fmt.Sprintf(" 跳转url: %s", reurl)
+			result += fmt.Sprintf("Redirect url: %s", reurl)
 		}
 		common.LogSuccess(result)
 	}

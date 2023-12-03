@@ -1,12 +1,15 @@
 package common
 
 import (
+	"fmt"
+	"time"
 	"flag"
 )
 
 func Banner() {
-	banner := `go-scan version: ` + version + ``
-	print(banner)
+    currentYear := time.Now().Year()
+    banner := fmt.Sprintf("© %d Baris Aydin; go-scan version: %s", currentYear, version)
+	fmt.Println(banner)
 }
 
 func Flag(Info *HostInfo) {

@@ -70,14 +70,14 @@ func CheckLive(hostslist []string, Ping bool) []string {
 	if len(hostslist) > 1000 {
 		arrTop, arrLen := ArrayCountValueTop(AliveHosts, common.LiveTop, true)
 		for i := 0; i < len(arrTop); i++ {
-			output := fmt.Sprintf("[*] LiveTop %-16s 段存活数量为: %d", arrTop[i]+".0.0/16", arrLen[i])
+			output := fmt.Sprintf("[*] LiveTop %-16s number of segments: %d", arrTop[i]+".0.0/16", arrLen[i])
 			common.LogSuccess(output)
 		}
 	}
 	if len(hostslist) > 256 {
 		arrTop, arrLen := ArrayCountValueTop(AliveHosts, common.LiveTop, false)
 		for i := 0; i < len(arrTop); i++ {
-			output := fmt.Sprintf("[*] LiveTop %-16s 段存活数量为: %d", arrTop[i]+".0/24", arrLen[i])
+			output := fmt.Sprintf("[*] LiveTop %-16s number of segments: %d", arrTop[i]+".0/24", arrLen[i])
 			common.LogSuccess(output)
 		}
 	}

@@ -38,7 +38,9 @@ netBIOS detection, domain control identification, and various other functions.
 Getting Started
 
 ```bash
-mv go-scan_mac_arm64 /usr/local/bin/go-scan
+wget https://github.com/devsolux/go-scan/releases/download/v1.0.0/go-scan_mac_arm64
+sudo mv go-scan_mac_arm64 /usr/local/bin/go-scan
+chmod +x /usr/local/bin/go-scan
 
 go-scan -h 192.168.1.1/24
 go-scan -h 192.168.1.1/16
@@ -184,7 +186,7 @@ Usage of ./go-scan:
 
 `go-scan -h 192.168.x.x -p 139 (Netbios detection, domain control identification, the [+]DC in the figure below represents domain control)`
 
-`go run .\main.go -h 192.168.x.x/24 -m netbios (Show complete netbios information)`
+`go run main.go -h 192.168.x.x/24 -m netbios (Show complete netbios information)`
 
-`go run .\main.go -h 192.0.0.0/8 -m icmp(Detect the gateway and several random IPs of each segment C, and count the number of surviving top 10 segments B and C)`
+`go run main.go -h 192.0.0.0/8 -m icmp(Detect the gateway and several random IPs of each segment C, and count the number of surviving top 10 segments B and C)`
 
