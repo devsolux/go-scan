@@ -4,3 +4,4 @@
 # Ignore built files
 out/
 result.txt
+go-scan_mac_arm64
